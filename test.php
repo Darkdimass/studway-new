@@ -1,5 +1,5 @@
 <?
-$uploaddir = 'F:\OpenServer\OpenServer\domains\studway\img\watson\\';
+$uploaddir = 'D:\Liquid\OpenServer\domains\studway\img\watson\\';
 $uploadfile = $uploaddir.basename($_FILES['file']['name']);
 $a = resize($_FILES['file']);
 if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile))
@@ -60,7 +60,7 @@ function resize($file, $type = 1, $rotate = null, $quality = null)
         imagecopyresampled($dest, $src, 0, 0, 0, 0, $w_dest, $h_dest, $w_src, $h_src);
 
         // Вывод картинки и очистка памяти
-        imagejpeg($dest, "F:\OpenServer\OpenServer\domains\studway\img\load\\".$tmp_path ."small". $file['name'], $quality);
+        imagejpeg($dest, "D:\Liquid\OpenServer\domains\studway\img\load\\".$tmp_path ."small". $file['name'], $quality);
         imagedestroy($dest);
         imagedestroy($src);
 
@@ -69,7 +69,7 @@ function resize($file, $type = 1, $rotate = null, $quality = null)
     else
     {
         // Вывод картинки и очистка памяти
-        imagejpeg($src, "F:\OpenServer\OpenServer\domains\studway\img\load\\".$tmp_path . $file['name'], $quality);
+        imagejpeg($src, "D:\Liquid\OpenServer\domains\studway\img\load\\".$tmp_path . $file['name'], $quality);
         imagedestroy($src);
 
         return $file['name'];

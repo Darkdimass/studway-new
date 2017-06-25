@@ -21,7 +21,7 @@ if (isset($_POST['log_submit'])){
 
 }
 if (isset($_POST['reg_submit'])){
-    $uploaddir = 'F:\OpenServer\OpenServer\domains\studway\img\\';
+    $uploaddir = 'D:\Liquid\OpenServer\domains\studway\img\\';
     $uploadfile = $uploaddir.basename($_FILES['file']['name']);
     if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile))
     {
